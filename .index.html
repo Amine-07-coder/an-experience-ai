@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مساعدي AI</title>
+<style>
+body {
+  margin: 0;
+  padding: 20px;
+  background: #101827;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+main {
+  max-width: 500px;
+  margin: 30px auto;
+}
+h1 { color: #7dd3fc; }
+#chat {
+  background: #1e293b;
+  border-radius: 14px;
+  padding: 15px;
+  min-height: 180px;
+  white-space: pre-wrap;
+  line-height: 1.8;
+}
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 10px;
+  background: #38bdf8;
+  font-size: 17px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<main>
+  <h1>🤖 مساعدي AI</h1>
+  <p>مرحبا! أنا مساعدك التجريبي.</p>
+
+  <div id="chat">اكتب سؤالاً لتجربة التطبيق.</div>
+
+  <textarea id="question"
+    placeholder="اكتب سؤالك هنا..."
+    rows="3"></textarea>
+
+  <button onclick="askAI()">إرسال السؤال</button>
+</main>
+
+<script>
+function askAI() {
+  const q = document.getElementById("question").value.trim();
+  const chat = document.getElementById("chat");
+
+  if (!q) {
+    chat.textContent = "اكتب سؤالاً أولاً.";
+    return;
+  }
+
+  chat.textContent =
+    "سؤالك: " + q +
+    "\n\nهذا جواب تجريبي فقط. لم نربط التطبيق بعد بنموذج ذكاء اصطناعي حقيقي.";
+}
+</script>
+</body>
+  </html>
